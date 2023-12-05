@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lawyer Case</title>
+    <link rel="stylesheet" href="login-style.css" />
+  </head>
+  <body>
+    <div class="container-login">
+      <div class="wrapper-login">
+        <div class="left-si">
+          <figure>
+            <img
+              src="../../asstes/Imges/Judiciary logo svg.svg"
+              alt="Lawyer Case"
+            />
+            <figcaption>Lawyer Case</figcaption>
+          </figure>
+        </div>
+        <div class="right-si">
+          <div class="header-ri">
+            <button id="signup-btn" class="active">Signup</button>
+            <span>/</span>
+            <button id="login-btn">Login</button>
+          </div>
+          <form action="" id="signup-form">
+            <div class="full-name">
+              <div class="user-fn-box">
+                <input type="text" maxlength="15" name="first-name" required />
+                <label>الاسم الاول</label>
+              </div>
+              <div class="user-ln-box">
+                <input type="text" maxlength="15" name="last-name" required />
+                <label>اسم العائلة</label>
+              </div>
+            </div>
+            <!-- <div class="user-name">
+              <div class="user-name-box">
+                <input type="text" name="user-name-sign" required />
+                <label>اسم المستخدم</label>
+              </div>
+            </div> -->
+            <div class="email-name">
+              <div class="email-name-box">
+                <input type="email" name="email-name-sign" required />
+                <label>عنوان البريد الالكترونى</label>
+              </div>
+            </div>
+            <div class="user-kind">
+              <div class="user-content">
+                <span>النوع :</span>
+                <span class="active-kind" id="user-kind">مواطن</span>
+                <span id="lawyer-kind">محامى</span>
+              </div>
+              <div class="lawyer-categry">
+                <select name="lawyer-categry" id="lawyer-categry-sel">
+                  <option value="" selected>اختر التخصص</option>
+                  <option value="محامى أسرة">محامى أسرة</option>
+                  <option value="محامى مجلس الدولة">محامى مجلس الدولة</option>
+                  <option value="محامى تجارى و شريكات">
+                    محامى تجارى و شريكات
+                  </option>
+                  <option value="محامى عمال">محامى عمال</option>
+                  <option value="محامى جنائى">محامى جنائى</option>
+                  <option value="محامى مدنى">محامى مدنى</option>
+                  <option value="محامى قضاء عسكرى">محامى قضاء عسكرى</option>
+                  <option value="محامى جرائم الكترونية">
+                    محامى جرائم الكترونية
+                  </option>
+                </select>
+              </div>
+            </div>
+
+            <div class="user-num">
+              <div class="user-num-box">
+                <input
+                  type="text"
+                  maxlength="12"
+                  name="user-num-sign"
+                  required
+                />
+                <label>رقم الهاتف</label>
+              </div>
+            </div>
+
+            <div class="user-id">
+              <div class="user-id-box">
+                <input
+                  type="text"
+                  maxlength="13"
+                  name="user-id-sign"
+                  required
+                />
+                <label>رقم الهوية الشخصية</label>
+              </div>
+            </div>
+
+            <div class="user-pass">
+              <div class="user-pass-box">
+                <input
+                  type="password"
+                  minlength="8"
+                  name="user-pass-sign"
+                  required
+                />
+                <label>كلمة السر</label>
+              </div>
+            </div>
+            <div class="user-submit">
+              <button type="submit" id="sub-btn">انشاء حساب</button>
+              <span class="spa-rt"
+                >هل أنت مشترك بالفعل في Lawyer Case ؟<span id="spa-login">
+                  تسجيل الدخول</span
+                ></span
+              >
+            </div>
+          </form>
+          <form action="" id="login-form">
+            <div class="user-name">
+              <div class="user-name-box">
+                <input type="text" name="user-name-login" required />
+                <label>اسم المستخدم</label>
+              </div>
+            </div>
+
+            <div class="user-pass">
+              <div class="user-pass-box">
+                <input
+                  type="password"
+                  minlength="8"
+                  name="user-pass-login"
+                  required
+                />
+                <label>كلمة السر</label>
+              </div>
+            </div>
+
+            <div class="user-submit">
+              <button type="submit" id="sub-btn">تسجيل الدخول</button>
+              <span class="spa-rt"
+                >لست عضوا فى Lawyer Case ؟<span id="spa-sign">
+                  سجل الان</span
+                ></span
+              >
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="login-script.js"></script>
+  </body>
+</html>
