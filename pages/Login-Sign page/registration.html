@@ -27,11 +27,25 @@
           <form action="" id="signup-form">
             <div class="full-name">
               <div class="user-fn-box">
-                <input type="text" maxlength="15" name="first-name" required />
+                <input
+                  type="text"
+                  maxlength="15"
+                  name="first-name"
+                  required
+                  oninvalid="this.setCustomValidity('ادخل الاسم الاول')"
+                  oninput="this,setCustomValidity('')"
+                />
                 <label>الاسم الاول</label>
               </div>
               <div class="user-ln-box">
-                <input type="text" maxlength="15" name="last-name" required />
+                <input
+                  type="text"
+                  maxlength="15"
+                  name="last-name"
+                  required
+                  oninvalid="this.setCustomValidity('ادخل الاسم العائلة')"
+                  oninput="this,setCustomValidity('')"
+                />
                 <label>اسم العائلة</label>
               </div>
             </div>
@@ -43,7 +57,13 @@
             </div> -->
             <div class="email-name">
               <div class="email-name-box">
-                <input type="email" name="email-name-sign" required />
+                <input
+                  type="email"
+                  name="email-name-sign"
+                  required
+                  oninvalid="this.setCustomValidity('الرجاء تضمين @ بعد اسم البريد الإلكتروني')"
+                  oninput="this,setCustomValidity('')"
+                />
                 <label>عنوان البريد الالكترونى</label>
               </div>
             </div>
@@ -79,6 +99,8 @@
                   maxlength="12"
                   name="user-num-sign"
                   required
+                  oninvalid="this.setCustomValidity('ادخل ادخل رقم الهاتف')"
+                  oninput="this,setCustomValidity('')"
                 />
                 <label>رقم الهاتف</label>
               </div>
@@ -91,6 +113,8 @@
                   maxlength="13"
                   name="user-id-sign"
                   required
+                  oninvalid="this.setCustomValidity('ادخل رقم الهوية الشخصية')"
+                  oninput="this,setCustomValidity('')"
                 />
                 <label>رقم الهوية الشخصية</label>
               </div>
@@ -103,6 +127,8 @@
                   minlength="8"
                   name="user-pass-sign"
                   required
+                  oninvalid="this.setCustomValidity('ادخل كلمة السر التى سوف تكون بحسابك')"
+                  oninput="this,setCustomValidity('')"
                 />
                 <label>كلمة السر</label>
               </div>
@@ -120,7 +146,13 @@
           <form action="" id="login-form">
             <div class="email-name">
               <div class="email-name-box">
-                <input type="email" name="email-name-login" required />
+                <input
+                  type="email"
+                  name="email-name-login"
+                  required
+                  oninvalid="this.setCustomValidity('الرجاء تضمين @ بعد اسم البريد الإلكتروني')"
+                  oninput="this,setCustomValidity('')"
+                />
                 <label>عنوان البريد الالكترونى</label>
               </div>
             </div>
@@ -132,6 +164,8 @@
                   minlength="8"
                   name="user-pass-login"
                   required
+                  oninvalid="this.setCustomValidity('ادخل كلمة السر الخاصة بك')"
+                  oninput="this,setCustomValidity('')"
                 />
                 <label>كلمة السر</label>
               </div>
