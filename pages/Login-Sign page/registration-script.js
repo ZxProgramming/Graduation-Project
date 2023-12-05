@@ -16,18 +16,23 @@ btn_log.addEventListener("click", function () {
   log_form.style.display = "flex";
 });
 
-const user_Kind = document.getElementById("user-kind");
+const user_kind = document.getElementById("user-kind");
 const lawyer_kind = document.getElementById("lawyer-kind");
+
 const lawyer_categry_sel = document.getElementById("lawyer-categry-sel");
 
 lawyer_kind.addEventListener("click", function () {
-  user_Kind.classList.remove("active-kind");
+  user_kind.classList.remove("active-kind");
   this.classList.add("active-kind");
+  this.setAttribute("value", "lawyer");
+  user_kind.removeAttribute("value");
   lawyer_categry_sel.style.display = "block";
 });
-user_Kind.addEventListener("click", function () {
+user_kind.addEventListener("click", function () {
   lawyer_kind.classList.remove("active-kind");
   this.classList.add("active-kind");
+  this.setAttribute("value", "user");
+  lawyer_kind.removeAttribute("value");
   lawyer_categry_sel.style.display = "none";
 });
 
@@ -42,8 +47,8 @@ spa_login.addEventListener("click", function () {
 });
 
 spa_sign.addEventListener("click", function () {
-btn_sig.classList.add("active");
-btn_log.classList.remove("active");
-sig_form.style.display = "block";
-log_form.style.display = "none";
+  btn_sig.classList.add("active");
+  btn_log.classList.remove("active");
+  sig_form.style.display = "block";
+  log_form.style.display = "none";
 });

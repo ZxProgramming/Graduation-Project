@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&display=swap');
+
+* {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       text-decoration: none;
+       border: none;
+       outline: none;
+}
+
+:root {
+       --main-clr: #517970;
+       --second-clr: #C69774;
+       --hover-clr: #158b73;
+       --main-font: 'Almarai', sans-serif;
+       --fw300: 300;
+       --fw400: 400;
+       --fw700: 700;
+}
