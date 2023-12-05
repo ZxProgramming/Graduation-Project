@@ -5,6 +5,11 @@
        padding: 0;
        box-sizing: border-box;
        text-decoration: none;
+}
+
+label,
+span,
+input {
        font-family: 'Almarai', sans-serif;
        font-weight: 300;
 }
@@ -28,9 +33,9 @@
        overflow: hidden;
        /* background-color: burlywood; */
        background-color: #C69774;
-       box-shadow: 0px 2px 100px 0px rgb(43 47 46 / 40%);
-       -webkit-box-shadow: 0px 2px 100px 0px rgb(43 47 46 / 40%);
-       -moz-box-shadow: 0px 2px 100px 0px rgb(43 47 46 / 40%);
+       box-shadow: 0px 2px 50px 0px rgb(43 47 46 / 40%);
+       -webkit-box-shadow: 0px 2px 50px 0px rgb(43 47 46 / 40%);
+       -moz-box-shadow: 0px 2px 50px 0px rgb(43 47 46 / 40%);
 }
 
 .container-login .wrapper-login .left-si {
@@ -139,7 +144,7 @@
 
 .container-login .wrapper-login .right-si .header-ri span {
        font-size: 3rem;
-       font-weight: 700;
+       font-weight: 400;
        color: #517970;
 }
 
@@ -176,7 +181,7 @@
        width: 100%;
 }
 
-#login-form .user-name {
+#login-form .email-name {
        display: flex;
        align-items: center;
        justify-content: space-between;
@@ -240,7 +245,7 @@
        width: 100%;
 }
 
-#login-form .user-name .user-name-box {
+#login-form .email-name .email-name-box {
        position: relative;
        width: 100%;
 }
@@ -309,7 +314,7 @@
        background: none;
 }
 
-#login-form .user-name .user-name-box input {
+#login-form .email-name .email-name-box input {
        width: 100%;
        padding: 10px 0;
        font-size: 30px;
@@ -420,7 +425,7 @@
        transition: .5s;
 }
 
-#login-form .user-name .user-name-box label {
+#login-form .email-name .email-name-box label {
        position: absolute;
        top: -15px;
        right: 0;
@@ -510,8 +515,8 @@
        font-size: 16px;
 }
 
-#login-form .user-name .user-name-box input:focus~label,
-#login-form .user-name .user-name-box input:valid~label {
+#login-form .email-name .email-name-box input:focus~label,
+#login-form .email-name .email-name-box input:valid~label {
        top: -20px;
        left: 0;
        color: #517970;
@@ -688,6 +693,43 @@
 
 #login-form .user-submit .spa-rt {
        direction: rtl;
+}
+
+#signup-form .user-submit .spa-rt #spa-login {
+       position: relative;
+}
+
+#signup-form .user-submit .spa-rt #spa-login::after {
+       content: "";
+       position: absolute;
+       right: 0;
+       bottom: -3px;
+       width: 0%;
+       height: 2px;
+       transition: 0.3s ease-in-out;
+       background-color: #517970;
+}
+#signup-form .user-submit .spa-rt:hover #spa-login::after {
+       width: 100%;
+}
+
+#login-form .user-submit .spa-rt #spa-sign {
+       position: relative;
+
+}
+#login-form .user-submit .spa-rt #spa-sign::after {
+       content: "";
+       position: absolute;
+       right: 0;
+       bottom: -3px;
+       width: 0%;
+       height: 2px;
+       transition: 0.3s ease-in-out;
+       background-color: #517970;
+}
+
+#login-form .user-submit .spa-rt:hover #spa-sign::after {
+       width: 100%;
 }
 
 
