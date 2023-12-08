@@ -5,6 +5,7 @@
        padding: 0;
        box-sizing: border-box;
        text-decoration: none;
+       list-style: none;
        border: none;
        outline: none;
 }
@@ -18,3 +19,377 @@
        --fw400: 400;
        --fw700: 700;
 }
+
+.container {
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+}
+
+.container .container-wrapper {
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+}
+
+.container .container-wrapper header {
+       width: 100%;
+       position: sticky;
+       top: 0;
+       z-index: 1000;
+       background: #fff;
+       box-shadow: 0px 0px 15px 0px rgb(156 156 156 / 40%);
+}
+
+.container .container-wrapper header .header-wrapper {
+       width: 100%;
+       height: 100%;
+       display: flex;
+       align-self: center;
+       justify-content: center;
+}
+
+.container .container-wrapper header .header-wrapper .nav-des {
+       padding: 10px;
+       width: 80%;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       column-gap: 10px;
+       /* background: red; */
+}
+
+.container .container-wrapper header .header-wrapper .nav-des .left-sid {
+       width: 15%;
+       display: flex;
+       align-items: center;
+       justify-content: flex-start;
+       /* background-color: yellow; */
+}
+
+.container .container-wrapper header .header-wrapper .nav-des .left-sid img {
+       width: 90px;
+       object-fit: cover;
+       object-position: center;
+}
+
+.container .container-wrapper header .header-wrapper .nav-des .center-sid {
+       width: 60%;
+       height: 100%;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       /* background-color: yellow; */
+}
+
+.container .container-wrapper header .header-wrapper .nav-des .center-sid ul {
+       width: 100%;
+       display: flex;
+       flex-direction: row-reverse;
+       align-items: center;
+       justify-content: space-between;
+       column-gap: 5px;
+}
+
+#active-lin {
+       padding: 15px 10px;
+       border-radius: 8px;
+       text-align: center;
+       cursor: pointer;
+       background-color: var(--main-clr);
+       transition: 0.5s ease-in-out;
+}
+
+#active-lin>a {
+       color: #fff;
+}
+
+.container .container-wrapper header .header-wrapper .nav-des .center-sid ul li {
+       transition: 0.5s ease-in-out;
+}
+
+.container .container-wrapper header .header-wrapper .nav-des .center-sid ul li:hover {
+       padding: 15px 20px;
+       border-radius: 8px;
+       background-color: var(--main-clr);
+
+}
+
+.container .container-wrapper header .header-wrapper .nav-des .center-sid ul li a {
+       font-family: var(--main-font);
+       font-weight: var(--fw700);
+       font-size: 1.2rem;
+       color: var(--main-clr);
+       transition: 0.5s ease-in-out;
+}
+
+.container .container-wrapper header .header-wrapper .nav-des .center-sid ul li:hover a {
+       color: #fff;
+}
+
+.container .container-wrapper header .header-wrapper .nav-des .right-sid {
+       width: 15%;
+       height: 100%;
+       display: flex;
+       align-items: center;
+       column-gap: 10px;
+       justify-content: center;
+       /* background-color: yellow; */
+}
+
+.container .container-wrapper header .header-wrapper .nav-des .right-sid button a {
+       font-size: 1.2rem;
+       font-family: var(--main-font);
+       font-weight: var(--fw700);
+       background: #fff;
+       color: var(--main-clr);
+       border: 2px solid var(--main-clr);
+       padding: 12px 20px;
+       border-radius: 8px;
+       transition: 0.5s ease-in-out;
+}
+
+.container .container-wrapper header .header-wrapper .nav-des .right-sid button:hover a {
+       background: var(--hover-clr);
+       color: #fff;
+       border: none;
+}
+
+.container .container-wrapper header .header-wrapper .nav-des .menu-icon {
+       display: none;
+}
+
+.container .container-wrapper header .header-wrapper .nav-des .phone-lin {
+       display: none;
+}
+
+/* ////// Header */
+
+.container .container-wrapper .hero-section {
+       position: relative;
+       width: 100%;
+       height: 86.2vh;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       background-image: url(https://www.edatasoft.com/files/diseno-web-abogados-centroamerica-central-law.jpg);
+       background-position: center;
+       background-repeat: no-repeat;
+       background-size: cover;
+       z-index: 1;
+}
+
+.container .container-wrapper .hero-section::after {
+       content: "";
+       position: absolute;
+       width: 100%;
+       height: 100%;
+       top: 0;
+       left: 0;
+       background-color: #27272786;
+}
+
+.container .container-wrapper .hero-section .hero-wrapper {
+       position: absolute;
+       color: #fff;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       font-family: var(--main-font);
+       row-gap: 20px;
+       z-index: 10;
+}
+
+.container .container-wrapper .hero-section .hero-wrapper h1 {
+       font-size: 2.5rem;
+       text-align: center;
+       font-weight: var(--fw700);
+}
+
+.container .container-wrapper .hero-section .hero-wrapper span {
+       font-size: 1.5rem;
+       font-weight: var(--fw400);
+       text-align: center;
+       margin-bottom: 20px;
+}
+
+.container .container-wrapper .hero-section .hero-wrapper button {
+       padding: 20px 40px;
+       border-radius: 10px;
+       background-color: #345951;
+       cursor: pointer;
+       transition: 0.3s ease-in-out;
+}
+
+.container .container-wrapper .hero-section .hero-wrapper button:hover {
+       background-color: var(--hover-clr);
+}
+
+.container .container-wrapper .hero-section .hero-wrapper button a {
+       font-size: 2rem;
+       color: #fff;
+       transition: 0.3s ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 900px) {
+       .container .container-wrapper .hero-section {
+              background-position: right;
+       }
+
+       .container .container-wrapper .hero-section .hero-wrapper h1 {
+              padding: 0px 40px;
+       }
+}
+
+
+
+
+
+
+
+/* Responsive Nav Bar in Screen > laptop */
+@media (max-width: 1400px) {
+
+       .container .container-wrapper header {
+              position: sticky;
+              z-index: 10;
+       }
+
+       .container .container-wrapper header .header-wrapper .nav-des {
+              width: 90%;
+              background-color: #fff;
+       }
+
+       .container .container-wrapper header .header-wrapper .nav-des .center-sid,
+       .container .container-wrapper header .header-wrapper .nav-des .right-sid {
+              display: none;
+       }
+
+       .container .container-wrapper header .header-wrapper .nav-des .menu-icon {
+              position: relative;
+              width: 20%;
+              height: 100%;
+              padding: 5px 0;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+              transition: 0.5s ease-in-out;
+       }
+
+
+       .container .container-wrapper header .header-wrapper .nav-des .menu-icon>span {
+              position: absolute;
+              right: 0;
+              top: 50%;
+              transform: translate(-20%, -50%);
+              font-size: 3rem;
+              color: var(--main-clr);
+              transition: 0.5s ease-in-out;
+       }
+
+       .container .container-wrapper header .header-wrapper .nav-des .menu-icon>span:nth-child(2) {
+              display: none;
+              font-size: 3.7rem;
+       }
+
+       .container .container-wrapper header .header-wrapper .nav-des {
+              width: 90%;
+       }
+
+       .container .container-wrapper header .header-wrapper .nav-des .phone-lin {
+              position: absolute;
+              width: 95%;
+              top: -200%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background-color: #fff;
+              border-radius: 0px 0px 20px 20px;
+              overflow: hidden;
+              transition: 0.4s ease-in-out;
+              z-index: -10;
+       }
+
+       .container .container-wrapper header .header-wrapper .nav-des .phone-lin ul {
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+       }
+
+       .container .container-wrapper header .header-wrapper .nav-des .phone-lin ul li {
+              width: 100%;
+              text-align: center;
+              padding: 15px 0;
+              transition: 0.5s ease-in-out;
+              cursor: pointer;
+       }
+
+       .container .container-wrapper header .header-wrapper .nav-des .phone-lin ul li a {
+              font-family: var(--main-font);
+              font-weight: var(--fw700);
+              font-size: 1.1rem;
+              color: var(--main-clr);
+              transition: 0.5s ease-in-out;
+       }
+
+       .container .container-wrapper header .header-wrapper .nav-des .phone-lin ul li:hover {
+              background-color: var(--main-clr);
+              padding: 20px 0;
+       }
+
+       #active-lin-pho {
+              background-color: var(--main-clr);
+              padding: 20px 0;
+
+       }
+
+       #active-lin-pho>a {
+              color: #fff;
+       }
+
+       .container .container-wrapper header .header-wrapper .nav-des .phone-lin ul li:hover a {
+              color: #fff;
+              font-size: 1.3rem;
+
+       }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Large Phone And Tablets */
+@media (max-width: 992px) {}
