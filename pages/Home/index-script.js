@@ -1,119 +1,24 @@
-const lin1 = document.querySelector(".li-nav1");
-const lin2 = document.querySelector(".li-nav2");
-const lin3 = document.querySelector(".li-nav3");
-const lin4 = document.querySelector(".li-nav4");
-const lin5 = document.querySelector(".li-nav5");
-const lin6 = document.querySelector(".li-nav6");
+const lin_nav = document.querySelectorAll(".li-nav");
 
-lin1.addEventListener("click", function () {
-  lin1.setAttribute("id", "active-lin");
-  lin2.removeAttribute("id", "active-lin");
-  lin3.removeAttribute("id", "active-lin");
-  lin4.removeAttribute("id", "active-lin");
-  lin5.removeAttribute("id", "active-lin");
-  lin6.removeAttribute("id", "active-lin");
-});
-lin2.addEventListener("click", function () {
-  lin1.removeAttribute("id", "active-lin");
-  lin2.setAttribute("id", "active-lin");
-  lin3.removeAttribute("id", "active-lin");
-  lin4.removeAttribute("id", "active-lin");
-  lin5.removeAttribute("id", "active-lin");
-  lin6.removeAttribute("id", "active-lin");
-});
-lin3.addEventListener("click", function () {
-  lin1.removeAttribute("id", "active-lin");
-  lin2.removeAttribute("id", "active-lin");
-  lin3.setAttribute("id", "active-lin");
-  lin4.removeAttribute("id", "active-lin");
-  lin5.removeAttribute("id", "active-lin");
-  lin6.removeAttribute("id", "active-lin");
-});
-lin4.addEventListener("click", function () {
-  lin1.removeAttribute("id", "active-lin");
-  lin2.removeAttribute("id", "active-lin");
-  lin3.removeAttribute("id", "active-lin");
-  lin4.setAttribute("id", "active-lin");
-  lin5.removeAttribute("id", "active-lin");
-  lin6.removeAttribute("id", "active-lin");
-});
-lin5.addEventListener("click", function () {
-  lin1.removeAttribute("id", "active-lin");
-  lin2.removeAttribute("id", "active-lin");
-  lin3.removeAttribute("id", "active-lin");
-  lin4.removeAttribute("id", "active-lin");
-  lin5.setAttribute("id", "active-lin");
-  lin6.removeAttribute("id", "active-lin");
-});
-lin6.addEventListener("click", function () {
-  lin1.removeAttribute("id", "active-lin");
-  lin2.removeAttribute("id", "active-lin");
-  lin3.removeAttribute("id", "active-lin");
-  lin4.removeAttribute("id", "active-lin");
-  lin5.removeAttribute("id", "active-lin");
-  lin6.setAttribute("id", "active-lin");
+lin_nav.forEach(function (ele) {
+  ele.addEventListener("click", function () {
+    lin_nav.forEach(function (elr) {
+      elr.removeAttribute("id", "active-lin");
+    });
+    this.setAttribute("id", "active-lin");
+  });
 });
 
-const lin_pho_1 = document.querySelector(".lin-pho1");
-const lin_pho_2 = document.querySelector(".lin-pho2");
-const lin_pho_3 = document.querySelector(".lin-pho3");
-const lin_pho_4 = document.querySelector(".lin-pho4");
-const lin_pho_5 = document.querySelector(".lin-pho5");
-const lin_pho_6 = document.querySelector(".lin-pho6");
+const lin_pho = document.querySelectorAll(".lin-pho");
 
-lin_pho_1.addEventListener("click", function () {
-  lin_pho_1.setAttribute("id", "active-lin-pho");
-  lin_pho_2.removeAttribute("id", "active-lin-pho");
-  lin_pho_3.removeAttribute("id", "active-lin-pho");
-  lin_pho_4.removeAttribute("id", "active-lin-pho");
-  lin_pho_5.removeAttribute("id", "active-lin-pho");
-  lin_pho_6.removeAttribute("id", "active-lin-pho");
-  closeMenu();
-});
-lin_pho_2.addEventListener("click", function () {
-  lin_pho_1.removeAttribute("id", "active-lin-pho");
-  lin_pho_2.setAttribute("id", "active-lin-pho");
-  lin_pho_3.removeAttribute("id", "active-lin-pho");
-  lin_pho_4.removeAttribute("id", "active-lin-pho");
-  lin_pho_5.removeAttribute("id", "active-lin-pho");
-  lin_pho_6.removeAttribute("id", "active-lin-pho");
-  closeMenu();
-});
-lin_pho_3.addEventListener("click", function () {
-  lin_pho_1.removeAttribute("id", "active-lin-pho");
-  lin_pho_2.removeAttribute("id", "active-lin-pho");
-  lin_pho_3.setAttribute("id", "active-lin-pho");
-  lin_pho_4.removeAttribute("id", "active-lin-pho");
-  lin_pho_5.removeAttribute("id", "active-lin-pho");
-  lin_pho_6.removeAttribute("id", "active-lin-pho");
-  closeMenu();
-});
-lin_pho_4.addEventListener("click", function () {
-  lin_pho_1.removeAttribute("id", "active-lin-pho");
-  lin_pho_2.removeAttribute("id", "active-lin-pho");
-  lin_pho_3.removeAttribute("id", "active-lin-pho");
-  lin_pho_4.setAttribute("id", "active-lin-pho");
-  lin_pho_5.removeAttribute("id", "active-lin-pho");
-  lin_pho_6.removeAttribute("id", "active-lin-pho");
-  closeMenu();
-});
-lin_pho_5.addEventListener("click", function () {
-  lin_pho_1.removeAttribute("id", "active-lin-pho");
-  lin_pho_2.removeAttribute("id", "active-lin-pho");
-  lin_pho_3.removeAttribute("id", "active-lin-pho");
-  lin_pho_4.removeAttribute("id", "active-lin-pho");
-  lin_pho_5.setAttribute("id", "active-lin-pho");
-  lin_pho_6.removeAttribute("id", "active-lin-pho");
-  closeMenu();
-});
-lin_pho_6.addEventListener("click", function () {
-  lin_pho_1.removeAttribute("id", "active-lin-pho");
-  lin_pho_2.removeAttribute("id", "active-lin-pho");
-  lin_pho_3.removeAttribute("id", "active-lin-pho");
-  lin_pho_4.removeAttribute("id", "active-lin-pho");
-  lin_pho_5.removeAttribute("id", "active-lin-pho");
-  lin_pho_6.setAttribute("id", "active-lin-pho");
-  closeMenu();
+lin_pho.forEach(function (ele) {
+  ele.addEventListener("click", function () {
+    lin_pho.forEach(function (elr) {
+      elr.removeAttribute("id", "active-lin-pho");
+    });
+    this.setAttribute("id", "active-lin-pho");
+    closeMenu();
+  });
 });
 const nav_phone = document.getElementById("nav-phone");
 
