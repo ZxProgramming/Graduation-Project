@@ -261,14 +261,40 @@ body::-webkit-scrollbar-thumb {
 .lawyers-section,
 .fq-section,
 .contact-section {
+       position: relative;
        width: 100%;
-       height: 100vh;
+       height: auto;
+       padding-bottom: 50px;
        display: flex;
        align-items: flex-start;
        justify-content: center;
        margin-top: 40px;
        border-bottom: 1px solid #eee;
 }
+
+.about-us {
+       position: absolute;
+       bottom: -60%;
+       width: 10px;
+       height: 10px;
+       background: red;
+}
+
+.service {
+       position: absolute;
+       bottom: 10%;
+       width: 10px;
+       height: 10px;
+       background: red;
+}
+.lawyer {
+       position: absolute;
+       top: -30%;
+       width: 10px;
+       height: 10px;
+       background: red;
+}
+
 
 .container .container-wrapper .about-section .about-wrapper {
        width: 90%;
@@ -312,6 +338,7 @@ body::-webkit-scrollbar-thumb {
 
 .title-section:hover h1 {
        color: #fff;
+       cursor: default;
 }
 
 .container .container-wrapper .about-section .about-wrapper .content-section {
@@ -380,9 +407,111 @@ body::-webkit-scrollbar-thumb {
        height: 100%;
 }
 
+/* ////////  End About Section */
+.container .container-wrapper .service-section .service-wrapper {
+       width: 90%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       /* background: red; */
+}
 
+.container .container-wrapper .service-section .service-wrapper .content-section {
+       width: 100%;
+       display: flex;
+       flex-wrap: wrap;
+       align-items: center;
+       justify-content: space-around;
+       gap: 30px 15px;
+}
 
+.container .container-wrapper .service-section .service-wrapper .content-section .card {
+       width: 24%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       direction: rtl;
+       background: #fff;
+       /* padding: 15px 10px; */
+       border-radius: 20px;
+       overflow: hidden;
+}
 
+.container .container-wrapper .service-section .service-wrapper .content-section .card .top-card {
+       position: relative;
+}
+
+.container .container-wrapper .service-section .service-wrapper .content-section .card .top-card::after {
+       content: url(/asstes/Imges/Judiciary\ logo\ svg.svg);
+       position: absolute;
+       width: 35px;
+       border-radius: 50%;
+       padding: 4px;
+       top: 100%;
+       left: 50%;
+       background-color: var(--second-clr);
+       transform: translate(-50%, -60%);
+}
+
+.container .container-wrapper .service-section .service-wrapper .content-section .card .top-card img {
+       width: 100%;
+       object-fit: contain;
+       object-position: center;
+}
+
+.container .container-wrapper .service-section .service-wrapper .content-section .card .bottom-card {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       margin: 20px 0;
+       row-gap: 15px;
+       font-family: var(--main-font);
+}
+
+.container .container-wrapper .service-section .service-wrapper .content-section .card .bottom-card h3 {
+       font-size: 1.4rem;
+       color: var(--main-clr);
+}
+
+.container .container-wrapper .service-section .service-wrapper .content-section .card .bottom-card p {
+       font-size: 1.1rem;
+       font-weight: var(--fw400);
+       padding: 0 15px;
+       text-align: center;
+       line-height: 22px;
+}
+
+.container .container-wrapper .service-section .service-wrapper .content-section .card .bottom-card button {
+       display: flex;
+       flex-direction: row-reverse;
+       align-items: center;
+       justify-content: space-between;
+       column-gap: 5px;
+       padding: 15px 20px;
+       border-radius: 10px;
+       background-color: var(--main-clr);
+       font-family: var(--main-font);
+}
+
+.container .container-wrapper .service-section .service-wrapper .content-section .card .bottom-card button a {
+       color: #fff;
+       font-size: 1.1rem;
+}
+.container .container-wrapper .service-section .service-wrapper .content-section .card .bottom-card button i {
+       margin-top: 4px;
+       font-size: 1rem;
+       color: #1e4d43;
+       transition: 0.3s ease-in-out;
+}
+
+.container .container-wrapper .service-section .service-wrapper .content-section .card .bottom-card button:hover i{
+       transform: translate(8px,0px);
+       font-size: 1.2rem;
+       color: #fff;
+}
 
 
 
@@ -404,6 +533,16 @@ body::-webkit-scrollbar-thumb {
               padding-bottom: 5px;
               margin-bottom: 10px;
        }
+
+       .container .container-wrapper .about-section,
+       .service-section,
+       .lawyers-section,
+       .fq-section,
+       .contact-section {
+              padding-bottom: 20px;
+       }
+
+
 
        .container .container-wrapper .about-section .about-wrapper .content-section {
               width: 100%;
@@ -427,7 +566,8 @@ body::-webkit-scrollbar-thumb {
               font-family: var(--main-font);
               font-size: 1.1rem;
               color: #fff;
-              line-height: 35px;
+              line-height: 40px;
+              padding: 0 35px;
        }
 
        .container .container-wrapper .about-section .about-wrapper .content-section .left p a {
@@ -469,6 +609,23 @@ body::-webkit-scrollbar-thumb {
               object-position: center;
               height: 100%;
        }
+       /* End About Section */
+       
+              .container .container-wrapper .service-section .service-wrapper .content-section {
+                     width: 100%;
+                     display: flex;
+                     flex-wrap: wrap;
+                     align-items: center;
+                     justify-content: space-around;
+                     margin-top: 40px;
+                     row-gap: 50px;
+              }
+       
+              .container .container-wrapper .service-section .service-wrapper .content-section .card {
+                     width: 100%;
+              }
+       
+
 }
 
 
