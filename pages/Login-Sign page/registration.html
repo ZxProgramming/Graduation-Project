@@ -1,3 +1,8 @@
+<?php 
+ echo $_POST['user'];
+ echo $_POST['lawyer'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -70,8 +75,8 @@
             <div class="user-kind">
               <div class="user-content">
                 <span>النوع :</span>
-                <span class="active-kind" id="user-kind">مواطن</span>
-                <span id="lawyer-kind">محامى</span>
+                <input class="active-kind" name="user" id="user-kind" value="مواطن" readonly/>
+                <input id="lawyer-kind" value="محامى" readonly/>
               </div>
               <div class="lawyer-categry">
                 <select name="lawyer-categry" id="lawyer-categry-sel">

@@ -582,7 +582,7 @@ input {
        align-items: center;
        justify-content: space-between;
        flex-wrap: wrap;
-       column-gap: 10px;
+       column-gap: 5px;
 }
 
 #signup-form .user-kind .user-content span {
@@ -591,13 +591,28 @@ input {
        transition: 0.4s ease-in-out;
        padding: 10px 0;
        margin-bottom: 20px;
+       font-family: var(--main-font);
 }
 
-#signup-form .user-kind .user-content span.active-kind {
+#signup-form .user-kind .user-content input {
+       font-size: 1.8rem;
+       cursor: pointer;
+       transition: 0.4s ease-in-out;
+       padding: 10px 0;
+       line-height: 3rem;
+       font-weight: 500;
+       color: #fff;
+       margin-bottom: 20px;
+       background-color: transparent;
+       width: 120px;
+       font-family: var(--main-font);
+}
+
+#signup-form .user-kind .user-content input.active-kind {
        background-color: var(--main-clr);
        padding: 10px 15px;
-       font-size: 1.8rem;
-       margin-right: 20px;
+       /* font-size: 1.8rem; */
+       /* margin-right: 20px; */
        border-radius: 5px;
 }
 
@@ -606,7 +621,7 @@ input {
        display: flex;
        align-items: center;
        justify-content: center;
-       margin-top: 2px;
+       margin-top: 10px;
 }
 
 #signup-form .lawyer-categry>select {
@@ -627,7 +642,7 @@ input {
        align-items: center;
        justify-content: center;
        row-gap: 10px;
-       margin-top: 30px;
+       margin-top: 15px;
 }
 
 #login-form .user-submit {
