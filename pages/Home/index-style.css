@@ -189,7 +189,7 @@ body::-webkit-scrollbar-thumb {
 .container .container-wrapper .hero-section {
        position: relative;
        width: 100%;
-       height: 86.2vh;
+       height: 87vh;
        margin-top: 105px;
        display: flex;
        align-items: center;
@@ -287,6 +287,7 @@ body::-webkit-scrollbar-thumb {
        height: 10px;
        background: red;
 }
+
 .lawyer {
        position: absolute;
        top: -30%;
@@ -420,6 +421,7 @@ body::-webkit-scrollbar-thumb {
 .container .container-wrapper .service-section .service-wrapper .content-section {
        width: 100%;
        display: flex;
+       flex-direction: row-reverse;
        flex-wrap: wrap;
        align-items: center;
        justify-content: space-around;
@@ -476,12 +478,29 @@ body::-webkit-scrollbar-thumb {
        color: var(--main-clr);
 }
 
-.container .container-wrapper .service-section .service-wrapper .content-section .card .bottom-card p {
+.container .container-wrapper .service-section .service-wrapper .content-section .card .bottom-card .content {
+       height: 150px;
+       overflow-y: scroll;
+}
+
+.container .container-wrapper .service-section .service-wrapper .content-section .card .bottom-card .content::-webkit-scrollbar {
+       width: 0.3em;
+       border-radius: 20px;
+       background-color: #eee;
+}
+
+.container .container-wrapper .service-section .service-wrapper .content-section .card .bottom-card .content::-webkit-scrollbar-thumb {
+       border-radius: 20px;
+       background-color: darkgrey;
+}
+
+.container .container-wrapper .service-section .service-wrapper .content-section .card .bottom-card .content p {
        font-size: 1.1rem;
        font-weight: var(--fw400);
        padding: 0 15px;
        text-align: center;
-       line-height: 22px;
+       line-height: 28px;
+       height: 150px;
 }
 
 .container .container-wrapper .service-section .service-wrapper .content-section .card .bottom-card button {
@@ -500,6 +519,7 @@ body::-webkit-scrollbar-thumb {
        color: #fff;
        font-size: 1.1rem;
 }
+
 .container .container-wrapper .service-section .service-wrapper .content-section .card .bottom-card button i {
        margin-top: 4px;
        font-size: 1rem;
@@ -507,8 +527,8 @@ body::-webkit-scrollbar-thumb {
        transition: 0.3s ease-in-out;
 }
 
-.container .container-wrapper .service-section .service-wrapper .content-section .card .bottom-card button:hover i{
-       transform: translate(8px,0px);
+.container .container-wrapper .service-section .service-wrapper .content-section .card .bottom-card button:hover i {
+       transform: translate(8px, 0px);
        font-size: 1.2rem;
        color: #fff;
 }
@@ -609,22 +629,32 @@ body::-webkit-scrollbar-thumb {
               object-position: center;
               height: 100%;
        }
+
        /* End About Section */
-       
-              .container .container-wrapper .service-section .service-wrapper .content-section {
-                     width: 100%;
-                     display: flex;
-                     flex-wrap: wrap;
-                     align-items: center;
-                     justify-content: space-around;
-                     margin-top: 40px;
-                     row-gap: 50px;
-              }
-       
-              .container .container-wrapper .service-section .service-wrapper .content-section .card {
-                     width: 100%;
-              }
-       
+
+       .container .container-wrapper .service-section .service-wrapper .content-section {
+              width: 100%;
+              display: flex;
+              flex-wrap: wrap;
+              align-items: center;
+              justify-content: space-around;
+              margin-top: 40px;
+              row-gap: 50px;
+       }
+
+       .container .container-wrapper .service-section .service-wrapper .content-section .card {
+              width: 100%;
+       }
+
+       .container .container-wrapper .service-section .service-wrapper .content-section .card .bottom-card h3 {
+              margin-top: 10px;
+       }
+
+       .container .container-wrapper .service-section .service-wrapper .content-section .card .bottom-card p {
+              line-height: 35px;
+              margin-bottom: 10px;
+       }
+
 
 }
 
