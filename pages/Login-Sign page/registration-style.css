@@ -281,9 +281,29 @@ input {
        width: 100%;
 }
 
+#signup-form .user-pass .user-pass-box i {
+       position: absolute;
+       display: none;
+       left: 0;
+       top: 25%;
+       z-index: 1000;
+       color: #fff;
+       cursor: pointer;
+}
+
 #login-form .user-pass .user-pass-box {
        position: relative;
        width: 100%;
+}
+
+#login-form .user-pass .user-pass-box i {
+       position: absolute;
+       display: none;
+       left: 0;
+       top: 25%;
+       z-index: 1000;
+       color: #fff;
+       cursor: pointer;
 }
 
 #signup-form .full-name .user-fn-box input {
@@ -382,6 +402,10 @@ input {
        background: none;
 }
 
+#signup-form .user-pass .user-pass-box input:active i:first-child {
+       display: block !important;
+}
+
 #login-form .user-pass .user-pass-box input {
        width: 100%;
        padding: 10px 0;
@@ -393,6 +417,10 @@ input {
        border-bottom: 1px solid #fff;
        outline: none;
        background: none;
+}
+
+#login-form .user-pass .user-pass-box input:active i:first-child {
+       display: block !important;
 }
 
 #signup-form .full-name .user-fn-box label {

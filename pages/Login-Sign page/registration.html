@@ -10,6 +10,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lawyer Case</title>
     <link rel="stylesheet" href="registration-style.css" />
+    <script
+      src="https://kit.fontawesome.com/bbda8ae88d.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="container-login">
@@ -75,8 +79,14 @@
             <div class="user-kind">
               <div class="user-content">
                 <span>النوع :</span>
-                <input class="active-kind" name="user" id="user-kind" value="مواطن" readonly/>
-                <input id="lawyer-kind" value="محامى" readonly/>
+                <input
+                  class="active-kind"
+                  name="user"
+                  id="user-kind"
+                  value="مواطن"
+                  readonly
+                />
+                <input id="lawyer-kind" value="محامى" readonly />
               </div>
               <div class="lawyer-categry">
                 <select name="lawyer-categry" id="lawyer-categry-sel">
@@ -131,15 +141,22 @@
                   type="password"
                   minlength="8"
                   name="user-pass-sign"
+                  id="password_sign"
                   required
                   oninvalid="this.setCustomValidity('ادخل كلمة السر التى سوف تكون بحسابك')"
                   oninput="this,setCustomValidity('')"
                 />
+                <i class="fa-regular fa-eye" id="show_pass_sign"></i>
+                <i
+                  class="fa-regular fa-eye-slash"
+                  id="hide_pass_sign"
+                  style="display: none"
+                ></i>
                 <label>كلمة السر</label>
               </div>
             </div>
             <div class="user-submit">
-              <button type="submit" id="sub-btn">انشاء حساب</button>
+              <button type="submit" id="sub-signBtn">انشاء حساب</button>
               <span class="spa-rt"
                 >هل أنت مشترك بالفعل في Lawyer Case ؟<span id="spa-login">
                   تسجيل الدخول</span
@@ -168,16 +185,23 @@
                   type="password"
                   minlength="8"
                   name="user-pass-login"
+                  id="password_login"
                   required
                   oninvalid="this.setCustomValidity('ادخل كلمة السر الخاصة بك')"
                   oninput="this,setCustomValidity('')"
                 />
+                <i class="fa-regular fa-eye" id="show_pass_login"></i>
+                <i
+                  class="fa-regular fa-eye-slash"
+                  id="hide_pass_login"
+                  style="display: none"
+                ></i>
                 <label>كلمة السر</label>
               </div>
             </div>
 
             <div class="user-submit">
-              <button type="submit" id="sub-btn">تسجيل الدخول</button>
+              <button type="submit" id="sub-loginBtn">تسجيل الدخول</button>
               <span class="spa-rt"
                 >لست عضوا فى Lawyer Case ؟<span id="spa-sign">
                   سجل الان</span
