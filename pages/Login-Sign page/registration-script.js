@@ -24,15 +24,15 @@ const lawyer_categry_sel = document.getElementById("lawyer-categry-sel");
 lawyer_kind.addEventListener("click", function () {
   user_kind.classList.remove("active-kind");
   this.classList.add("active-kind");
-  this.setAttribute("value", "lawyer");
-  user_kind.removeAttribute("value");
+  this.setAttribute("name", "lawyer");
+  user_kind.removeAttribute("name");
   lawyer_categry_sel.style.display = "block";
 });
 user_kind.addEventListener("click", function () {
   lawyer_kind.classList.remove("active-kind");
   this.classList.add("active-kind");
-  this.setAttribute("value", "user");
-  lawyer_kind.removeAttribute("value");
+  this.setAttribute("name", "user");
+  lawyer_kind.removeAttribute("name");
   lawyer_categry_sel.style.display = "none";
 });
 
