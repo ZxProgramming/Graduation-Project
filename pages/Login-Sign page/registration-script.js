@@ -51,9 +51,6 @@ spa_sign.addEventListener("click", function () {
   btn_log.classList.remove("active");
   sig_form.style.display = "block";
   log_form.style.display = "none";
-<<<<<<< HEAD:asstes/js/registration-script.js
-});
-=======
 });
 
 const show_pass_btn = document.getElementById("show_pass_sign");
@@ -105,4 +102,3 @@ pass_loginBtn.addEventListener("focusout", function () {
     show_pass_loginBtn.style.display = "none";
   }
 });
->>>>>>> bc33a286155294bd5baf41a36fa6f5579f3ee12f:pages/Login-Sign page/registration-script.js
