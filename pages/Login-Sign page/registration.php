@@ -1,8 +1,15 @@
+<<<<<<< HEAD:pages/Login-Sign page/registration.php
   <?php 
   include('../../init/init.php');
   
   $pageTitle ='Lawyer Case';
   ?>
+=======
+<?php 
+ echo $_POST['user'];
+ echo $_POST['lawyer'];
+?>
+>>>>>>> bc33a286155294bd5baf41a36fa6f5579f3ee12f:pages/Login-Sign page/registration.html
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,6 +18,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><?php getTitle()?></title>
     <link rel="stylesheet" href="registration-style.css" />
+    <script
+      src="https://kit.fontawesome.com/bbda8ae88d.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="container-login">
@@ -101,8 +112,14 @@
             <div class="user-kind">
               <div class="user-content">
                 <span>النوع :</span>
-                <span class="active-kind" id="user-kind">مواطن</span>
-                <span id="lawyer-kind">محامى</span>
+                <input
+                  class="active-kind"
+                  name="user"
+                  id="user-kind"
+                  value="مواطن"
+                  readonly
+                />
+                <input id="lawyer-kind" value="محامى" readonly />
               </div>
               <div class="lawyer-categry">
                 <select name="lawyer-categry" id="lawyer-categry-sel">
@@ -168,16 +185,27 @@
                 <input
                   type="password"
                   minlength="8"
+<<<<<<< HEAD:pages/Login-Sign page/registration.php
                   name="password"
+=======
+                  name="user-pass-sign"
+                  id="password_sign"
+>>>>>>> bc33a286155294bd5baf41a36fa6f5579f3ee12f:pages/Login-Sign page/registration.html
                   required
                   oninvalid="this.setCustomValidity('ادخل كلمة السر التى سوف تكون بحسابك')"
                   oninput="this,setCustomValidity('')"
                 />
+                <i class="fa-regular fa-eye" id="show_pass_sign"></i>
+                <i
+                  class="fa-regular fa-eye-slash"
+                  id="hide_pass_sign"
+                  style="display: none"
+                ></i>
                 <label>كلمة السر</label>
               </div>
             </div>
             <div class="user-submit">
-              <button type="submit" id="sub-btn">انشاء حساب</button>
+              <button type="submit" id="sub-signBtn">انشاء حساب</button>
               <span class="spa-rt"
                 >هل أنت مشترك بالفعل في Lawyer Case ؟<span id="spa-login">
                   تسجيل الدخول</span
@@ -205,17 +233,28 @@
                 <input
                   type="password_login"
                   minlength="8"
+<<<<<<< HEAD:pages/Login-Sign page/registration.php
                   name="password_login"
+=======
+                  name="user-pass-login"
+                  id="password_login"
+>>>>>>> bc33a286155294bd5baf41a36fa6f5579f3ee12f:pages/Login-Sign page/registration.html
                   required
                   oninvalid="this.setCustomValidity('ادخل كلمة السر الخاصة بك')"
                   oninput="this,setCustomValidity('')"
                 />
+                <i class="fa-regular fa-eye" id="show_pass_login"></i>
+                <i
+                  class="fa-regular fa-eye-slash"
+                  id="hide_pass_login"
+                  style="display: none"
+                ></i>
                 <label>كلمة السر</label>
               </div>
             </div>
 
             <div class="user-submit">
-              <button type="submit" id="sub-btn">تسجيل الدخول</button>
+              <button type="submit" id="sub-loginBtn">تسجيل الدخول</button>
               <span class="spa-rt"
                 >لست عضوا فى Lawyer Case ؟<span id="spa-sign">
                   سجل الان</span

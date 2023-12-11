@@ -5,8 +5,24 @@
        padding: 0;
        box-sizing: border-box;
        text-decoration: none;
+       list-style: none;
        border: none;
        outline: none;
+       scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+       width: 0.4rem;
+}
+
+body::-webkit-scrollbar-track {
+       background-color: #fff;
+}
+
+body::-webkit-scrollbar-thumb {
+       background-color: var(--main-clr);
+       border-radius: 10px;
+       outline: 1px solid slategrey;
 }
 
 :root {
@@ -18,8 +34,765 @@
        --fw400: 400;
        --fw700: 700;
 }
+<<<<<<< HEAD
 body{
        width: 100%;
        height: 100vh;
        background-color: red;
 }
+=======
+
+.container {
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+}
+
+.container .container-wrapper {
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       overflow: hidden;
+       background-color: var(--second-clr);
+}
+
+.container .container-wrapper header {
+       width: 100%;
+       position: fixed;
+       top: 0;
+       z-index: 1000;
+       background: #fff;
+       box-shadow: 0px 0px 15px 0px rgb(156 156 156 / 40%);
+}
+
+.container .container-wrapper header .header-wrapper {
+       width: 100%;
+       height: 100%;
+       display: flex;
+       align-self: center;
+       justify-content: center;
+}
+
+.container .container-wrapper header .header-wrapper .nav-des {
+       padding: 10px;
+       width: 80%;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       column-gap: 10px;
+       /* background: red; */
+}
+
+.container .container-wrapper header .header-wrapper .nav-des .left-sid {
+       width: 15%;
+       display: flex;
+       align-items: center;
+       justify-content: flex-start;
+       /* background-color: yellow; */
+}
+
+.container .container-wrapper header .header-wrapper .nav-des .left-sid img {
+       width: 90px;
+       object-fit: cover;
+       object-position: center;
+}
+
+.container .container-wrapper header .header-wrapper .nav-des .center-sid {
+       width: 60%;
+       height: 100%;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       /* background-color: yellow; */
+}
+
+.container .container-wrapper header .header-wrapper .nav-des .center-sid ul {
+       width: 100%;
+       display: flex;
+       flex-direction: row-reverse;
+       align-items: center;
+       justify-content: space-between;
+       column-gap: 5px;
+}
+
+#active-lin {
+       padding: 15px 10px;
+       border-radius: 8px;
+       text-align: center;
+       cursor: pointer;
+       background-color: var(--main-clr);
+       transition: 0.5s ease-in-out;
+}
+
+#active-lin>a {
+       color: #fff;
+}
+
+.container .container-wrapper header .header-wrapper .nav-des .center-sid ul li {
+       transition: 0.5s ease-in-out;
+}
+
+.container .container-wrapper header .header-wrapper .nav-des .center-sid ul li:hover {
+       padding: 15px 20px;
+       border-radius: 8px;
+       background-color: var(--main-clr);
+
+}
+
+.container .container-wrapper header .header-wrapper .nav-des .center-sid ul li a {
+       font-family: var(--main-font);
+       font-weight: var(--fw700);
+       font-size: 1.2rem;
+       color: var(--main-clr);
+       transition: 0.5s ease-in-out;
+}
+
+.container .container-wrapper header .header-wrapper .nav-des .center-sid ul li:hover a {
+       color: #fff;
+}
+
+.container .container-wrapper header .header-wrapper .nav-des .right-sid {
+       width: 15%;
+       height: 100%;
+       display: flex;
+       align-items: center;
+       column-gap: 10px;
+       justify-content: center;
+       /* background-color: yellow; */
+}
+
+.container .container-wrapper header .header-wrapper .nav-des .right-sid button a {
+       font-size: 1.2rem;
+       font-family: var(--main-font);
+       font-weight: var(--fw700);
+       background: #fff;
+       color: var(--main-clr);
+       border: 2px solid var(--main-clr);
+       padding: 12px 20px;
+       border-radius: 8px;
+       transition: 0.5s ease-in-out;
+}
+
+.container .container-wrapper header .header-wrapper .nav-des .right-sid button:hover a {
+       background: var(--hover-clr);
+       color: #fff;
+       border: none;
+}
+
+.container .container-wrapper header .header-wrapper .nav-des .menu-icon {
+       display: none;
+}
+
+.container .container-wrapper header .header-wrapper .nav-des .phone-lin {
+       display: none;
+}
+
+/* ////// Header */
+
+.container .container-wrapper .hero-section {
+       position: relative;
+       width: 100%;
+       height: 87vh;
+       margin-top: 105px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       background-image: url("/asstes/Imges/BackgroundHero.jpg");
+       background-position: center;
+       background-repeat: no-repeat;
+       background-size: cover;
+       z-index: 1;
+}
+
+.container .container-wrapper .hero-section::after {
+       content: "";
+       position: absolute;
+       width: 100%;
+       height: 100%;
+       top: 0;
+       left: 0;
+       background-color: #27272786;
+}
+
+.container .container-wrapper .hero-section .hero-wrapper {
+       position: absolute;
+       color: #fff;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       font-family: var(--main-font);
+       row-gap: 20px;
+       z-index: 10;
+}
+
+.container .container-wrapper .hero-section .hero-wrapper h1 {
+       font-size: 2.5rem;
+       text-align: center;
+       font-weight: var(--fw700);
+}
+
+.container .container-wrapper .hero-section .hero-wrapper span {
+       font-size: 1.5rem;
+       font-weight: var(--fw400);
+       text-align: center;
+       margin-bottom: 20px;
+}
+
+.container .container-wrapper .hero-section .hero-wrapper button {
+       padding: 20px 40px;
+       border-radius: 10px;
+       background-color: #345951;
+       cursor: pointer;
+       transition: 0.3s ease-in-out;
+}
+
+.container .container-wrapper .hero-section .hero-wrapper button:hover {
+       background-color: var(--hover-clr);
+}
+
+.container .container-wrapper .hero-section .hero-wrapper button a {
+       font-size: 2rem;
+       color: #fff;
+       transition: 0.3s ease-in-out;
+}
+
+/* /////////// Hero Section */
+
+.container .container-wrapper .about-section,
+.service-section,
+.lawyers-section,
+.fq-section,
+.contact-section {
+       position: relative;
+       width: 100%;
+       height: auto;
+       padding-bottom: 50px;
+       display: flex;
+       align-items: flex-start;
+       justify-content: center;
+       margin-top: 40px;
+       border-bottom: 1px solid #eee;
+}
+
+.about-us {
+       position: absolute;
+       bottom: -60%;
+       width: 10px;
+       height: 10px;
+       background: red;
+}
+
+.service {
+       position: absolute;
+       bottom: 10%;
+       width: 10px;
+       height: 10px;
+       background: red;
+}
+
+.lawyer {
+       position: absolute;
+       top: -30%;
+       width: 10px;
+       height: 10px;
+       background: red;
+}
+
+
+.container .container-wrapper .about-section .about-wrapper {
+       width: 90%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+}
+
+.title-section {
+       position: relative;
+       padding-bottom: 5px;
+       margin-bottom: 40px;
+}
+
+.title-section::after {
+       content: '';
+       position: absolute;
+       width: 20px;
+       right: 0;
+       bottom: 0;
+       height: 5px;
+       border-radius: 10px;
+       background-color: var(--main-clr);
+       transition: 0.4s ease-in-out;
+}
+
+.title-section:hover::after {
+       width: 100%;
+       background-color: #fff;
+}
+
+
+.title-section h1 {
+       font-family: var(--main-font);
+       font-weight: var(--fw700);
+       font-size: 2.5rem;
+       color: var(--main-clr);
+       transition: 0.4s ease-in-out;
+}
+
+.title-section:hover h1 {
+       color: #fff;
+       cursor: default;
+}
+
+.container .container-wrapper .about-section .about-wrapper .content-section {
+       width: 100%;
+       display: flex;
+       flex-direction: row-reverse;
+       align-items: center;
+       justify-content: space-between;
+       margin-top: 30px;
+}
+
+.container .container-wrapper .about-section .about-wrapper .content-section .left {
+       direction: rtl;
+       width: 50%;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       padding: 20px;
+}
+
+.container .container-wrapper .about-section .about-wrapper .content-section .left p {
+       font-family: var(--main-font);
+       font-size: 1.3rem;
+       color: #fff;
+       line-height: 35px;
+}
+
+.container .container-wrapper .about-section .about-wrapper .content-section .left p a {
+       font-weight: var(--fw700);
+       color: var(--main-clr);
+       font-size: 1.5rem;
+       cursor: pointer;
+}
+
+.container .container-wrapper .about-section .about-wrapper .content-section .right {
+       width: 50%;
+       /* background-color: red; */
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       border-radius: 20px;
+       overflow: hidden;
+}
+
+.container .container-wrapper .about-section .about-wrapper .content-section .right .about-img {
+       position: relative;
+       width: 100%;
+}
+
+.container .container-wrapper .about-section .about-wrapper .content-section .right .about-img::after {
+       content: '';
+       position: absolute;
+       width: 100%;
+       height: 99%;
+       top: 0;
+       left: 0;
+       background-color: #00000050;
+       border-radius: 20px;
+}
+
+.container .container-wrapper .about-section .about-wrapper .content-section .right .about-img img {
+       width: 100%;
+       border-radius: 20px;
+       object-fit: cover;
+       object-position: center;
+       height: 100%;
+}
+
+/* ////////  End About Section */
+.container .container-wrapper .service-section .service-wrapper {
+       width: 90%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       /* background: red; */
+}
+
+.container .container-wrapper .service-section .service-wrapper .content-section {
+       width: 100%;
+       display: flex;
+       flex-direction: row-reverse;
+       flex-wrap: wrap;
+       align-items: center;
+       justify-content: space-around;
+       gap: 30px 15px;
+}
+
+.container .container-wrapper .service-section .service-wrapper .content-section .card {
+       width: 24%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       direction: rtl;
+       background: #fff;
+       /* padding: 15px 10px; */
+       border-radius: 20px;
+       overflow: hidden;
+}
+
+.container .container-wrapper .service-section .service-wrapper .content-section .card .top-card {
+       position: relative;
+}
+
+.container .container-wrapper .service-section .service-wrapper .content-section .card .top-card::after {
+       content: url(/asstes/Imges/Judiciary\ logo\ svg.svg);
+       position: absolute;
+       width: 35px;
+       border-radius: 50%;
+       padding: 4px;
+       top: 100%;
+       left: 50%;
+       background-color: var(--second-clr);
+       transform: translate(-50%, -60%);
+}
+
+.container .container-wrapper .service-section .service-wrapper .content-section .card .top-card img {
+       width: 100%;
+       object-fit: contain;
+       object-position: center;
+}
+
+.container .container-wrapper .service-section .service-wrapper .content-section .card .bottom-card {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       margin: 20px 0;
+       row-gap: 15px;
+       font-family: var(--main-font);
+}
+
+.container .container-wrapper .service-section .service-wrapper .content-section .card .bottom-card h3 {
+       font-size: 1.4rem;
+       color: var(--main-clr);
+}
+
+.container .container-wrapper .service-section .service-wrapper .content-section .card .bottom-card .content {
+       height: 150px;
+       overflow-y: scroll;
+}
+
+.container .container-wrapper .service-section .service-wrapper .content-section .card .bottom-card .content::-webkit-scrollbar {
+       width: 0.3em;
+       border-radius: 20px;
+       background-color: #eee;
+}
+
+.container .container-wrapper .service-section .service-wrapper .content-section .card .bottom-card .content::-webkit-scrollbar-thumb {
+       border-radius: 20px;
+       background-color: darkgrey;
+}
+
+.container .container-wrapper .service-section .service-wrapper .content-section .card .bottom-card .content p {
+       font-size: 1.1rem;
+       font-weight: var(--fw400);
+       padding: 0 15px;
+       text-align: center;
+       line-height: 28px;
+       height: 150px;
+}
+
+.container .container-wrapper .service-section .service-wrapper .content-section .card .bottom-card button {
+       display: flex;
+       flex-direction: row-reverse;
+       align-items: center;
+       justify-content: space-between;
+       column-gap: 5px;
+       padding: 15px 20px;
+       border-radius: 10px;
+       background-color: var(--main-clr);
+       font-family: var(--main-font);
+}
+
+.container .container-wrapper .service-section .service-wrapper .content-section .card .bottom-card button a {
+       color: #fff;
+       font-size: 1.1rem;
+}
+
+.container .container-wrapper .service-section .service-wrapper .content-section .card .bottom-card button i {
+       margin-top: 4px;
+       font-size: 1rem;
+       color: #1e4d43;
+       transition: 0.3s ease-in-out;
+}
+
+.container .container-wrapper .service-section .service-wrapper .content-section .card .bottom-card button:hover i {
+       transform: translate(8px, 0px);
+       font-size: 1.2rem;
+       color: #fff;
+}
+
+
+
+
+
+
+
+@media (max-width: 900px) {
+       .container .container-wrapper .hero-section {
+              background-position: right;
+       }
+
+       .container .container-wrapper .hero-section .hero-wrapper h1 {
+              padding: 0px 40px;
+       }
+
+       .title-section {
+              position: relative;
+              padding-bottom: 5px;
+              margin-bottom: 10px;
+       }
+
+       .container .container-wrapper .about-section,
+       .service-section,
+       .lawyers-section,
+       .fq-section,
+       .contact-section {
+              padding-bottom: 20px;
+       }
+
+
+
+       .container .container-wrapper .about-section .about-wrapper .content-section {
+              width: 100%;
+              display: flex;
+              flex-direction: column-reverse;
+              align-items: center;
+              justify-content: center;
+              margin-top: 30px;
+       }
+
+       .container .container-wrapper .about-section .about-wrapper .content-section .left {
+              direction: rtl;
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 20px;
+       }
+
+       .container .container-wrapper .about-section .about-wrapper .content-section .left p {
+              font-family: var(--main-font);
+              font-size: 1.1rem;
+              color: #fff;
+              line-height: 40px;
+              padding: 0 35px;
+       }
+
+       .container .container-wrapper .about-section .about-wrapper .content-section .left p a {
+              font-weight: var(--fw700);
+              color: var(--main-clr);
+              font-size: 1.5rem;
+              cursor: pointer;
+       }
+
+       .container .container-wrapper .about-section .about-wrapper .content-section .right {
+              width: 90%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 20px;
+              overflow: hidden;
+       }
+
+       .container .container-wrapper .about-section .about-wrapper .content-section .right .about-img {
+              position: relative;
+              width: 100%;
+       }
+
+       .container .container-wrapper .about-section .about-wrapper .content-section .right .about-img::after {
+              content: '';
+              position: absolute;
+              width: 100%;
+              height: 99%;
+              top: 0;
+              left: 0;
+              background-color: #00000050;
+              border-radius: 20px;
+       }
+
+       .container .container-wrapper .about-section .about-wrapper .content-section .right .about-img img {
+              width: 100%;
+              border-radius: 20px;
+              object-fit: cover;
+              object-position: center;
+              height: 100%;
+       }
+
+       /* End About Section */
+
+       .container .container-wrapper .service-section .service-wrapper .content-section {
+              width: 100%;
+              display: flex;
+              flex-wrap: wrap;
+              align-items: center;
+              justify-content: space-around;
+              margin-top: 40px;
+              row-gap: 50px;
+       }
+
+       .container .container-wrapper .service-section .service-wrapper .content-section .card {
+              width: 100%;
+       }
+
+       .container .container-wrapper .service-section .service-wrapper .content-section .card .bottom-card h3 {
+              margin-top: 10px;
+       }
+
+       .container .container-wrapper .service-section .service-wrapper .content-section .card .bottom-card p {
+              line-height: 35px;
+              margin-bottom: 10px;
+       }
+
+
+}
+
+
+
+
+
+
+
+/* Responsive Nav Bar in Screen > laptop */
+@media (max-width: 1400px) {
+
+       .container .container-wrapper header {
+              z-index: 10;
+       }
+
+       .container .container-wrapper header .header-wrapper .nav-des {
+              width: 90%;
+              background-color: #fff;
+       }
+
+       .container .container-wrapper header .header-wrapper .nav-des .center-sid,
+       .container .container-wrapper header .header-wrapper .nav-des .right-sid {
+              display: none;
+       }
+
+       .container .container-wrapper header .header-wrapper .nav-des .menu-icon {
+              position: relative;
+              width: 20%;
+              height: 100%;
+              padding: 5px 0;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+              transition: 0.5s ease-in-out;
+       }
+
+
+       .container .container-wrapper header .header-wrapper .nav-des .menu-icon>span {
+              position: absolute;
+              right: 0;
+              top: 50%;
+              transform: translate(-20%, -50%);
+              font-size: 3rem;
+              color: var(--main-clr);
+              transition: 0.5s ease-in-out;
+       }
+
+       .container .container-wrapper header .header-wrapper .nav-des .menu-icon>span:nth-child(2) {
+              display: none;
+              font-size: 3.7rem;
+       }
+
+       .container .container-wrapper header .header-wrapper .nav-des {
+              width: 90%;
+       }
+
+       .container .container-wrapper header .header-wrapper .nav-des .phone-lin {
+              position: absolute;
+              width: 95%;
+              top: -200%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background-color: #fff;
+              border-radius: 0px 0px 20px 20px;
+              overflow: hidden;
+              transition: 0.4s ease-in-out;
+              z-index: -10;
+       }
+
+       .container .container-wrapper header .header-wrapper .nav-des .phone-lin ul {
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+       }
+
+       .container .container-wrapper header .header-wrapper .nav-des .phone-lin ul li {
+              width: 100%;
+              text-align: center;
+              padding: 15px 0;
+              transition: 0.5s ease-in-out;
+              cursor: pointer;
+       }
+
+       .container .container-wrapper header .header-wrapper .nav-des .phone-lin ul li a {
+              font-family: var(--main-font);
+              font-weight: var(--fw700);
+              font-size: 1.1rem;
+              color: var(--main-clr);
+              transition: 0.5s ease-in-out;
+       }
+
+       .container .container-wrapper header .header-wrapper .nav-des .phone-lin ul li:hover {
+              background-color: var(--main-clr);
+              padding: 20px 0;
+       }
+
+       #active-lin-pho {
+              background-color: var(--main-clr);
+              padding: 20px 0;
+
+       }
+
+       #active-lin-pho>a {
+              color: #fff;
+       }
+
+       .container .container-wrapper header .header-wrapper .nav-des .phone-lin ul li:hover a {
+              color: #fff;
+              font-size: 1.3rem;
+
+       }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Large Phone And Tablets */
+@media (max-width: 992px) {}
+>>>>>>> bc33a286155294bd5baf41a36fa6f5579f3ee12f
