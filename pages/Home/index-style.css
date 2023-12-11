@@ -34,6 +34,13 @@ body::-webkit-scrollbar-thumb {
        --fw400: 400;
        --fw700: 700;
 }
+<<<<<<< HEAD
+body{
+       width: 100%;
+       height: 100vh;
+       background-color: red;
+}
+=======
 
 .container {
        width: 100%;
@@ -788,3 +795,4 @@ body::-webkit-scrollbar-thumb {
 
 /* Large Phone And Tablets */
 @media (max-width: 992px) {}
+>>>>>>> bc33a286155294bd5baf41a36fa6f5579f3ee12f

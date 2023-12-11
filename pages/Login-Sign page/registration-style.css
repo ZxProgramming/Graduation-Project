@@ -781,6 +781,13 @@ input {
 
 /* login Section */
 
+<<<<<<< HEAD
+/*  Error Style  */
+.error {
+       color: red;
+}
+/*  Error Style  */
+=======
 
 @media (max-width: 1500px) {
        .container-login .wrapper-login .right-si {
@@ -943,3 +950,4 @@ input {
               text-align: center;
        }
 }
+>>>>>>> bc33a286155294bd5baf41a36fa6f5579f3ee12f
