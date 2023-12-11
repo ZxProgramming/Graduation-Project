@@ -1,15 +1,9 @@
-<<<<<<< HEAD:pages/Login-Sign page/registration.php
   <?php 
   include('../../init/init.php');
   
   $pageTitle ='Lawyer Case';
   ?>
-=======
-<?php 
- echo $_POST['user'];
- echo $_POST['lawyer'];
-?>
->>>>>>> bc33a286155294bd5baf41a36fa6f5579f3ee12f:pages/Login-Sign page/registration.html
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -185,12 +179,9 @@
                 <input
                   type="password"
                   minlength="8"
-<<<<<<< HEAD:pages/Login-Sign page/registration.php
                   name="password"
-=======
                   name="user-pass-sign"
                   id="password_sign"
->>>>>>> bc33a286155294bd5baf41a36fa6f5579f3ee12f:pages/Login-Sign page/registration.html
                   required
                   oninvalid="this.setCustomValidity('ادخل كلمة السر التى سوف تكون بحسابك')"
                   oninput="this,setCustomValidity('')"
@@ -233,12 +224,9 @@
                 <input
                   type="password_login"
                   minlength="8"
-<<<<<<< HEAD:pages/Login-Sign page/registration.php
                   name="password_login"
-=======
                   name="user-pass-login"
                   id="password_login"
->>>>>>> bc33a286155294bd5baf41a36fa6f5579f3ee12f:pages/Login-Sign page/registration.html
                   required
                   oninvalid="this.setCustomValidity('ادخل كلمة السر الخاصة بك')"
                   oninput="this,setCustomValidity('')"
@@ -265,6 +253,6 @@
         </div>
       </div>
     </div>
-    <script src="../../asstes/js/registration-script.js"></script>
+    <script src="registration-script.js"></script>
   </body>
 </html>
