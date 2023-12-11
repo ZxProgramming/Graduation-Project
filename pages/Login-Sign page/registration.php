@@ -1,9 +1,15 @@
+  <?php 
+  include('../../init/init.php');
+  
+  $pageTitle ='Lawyer Case';
+  ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lawyer Case</title>
+    <title><?php getTitle()?></title>
     <link rel="stylesheet" href="registration-style.css" />
   </head>
   <body>
@@ -24,29 +30,47 @@
             <span>/</span>
             <button id="login-btn">Login</button>
           </div>
-          <form action="" id="signup-form">
+          <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" id="signup-form" >
             <div class="full-name">
               <div class="user-fn-box">
                 <input
                   type="text"
                   maxlength="15"
-                  name="first-name"
+                  name="firstName"
                   required
+                  value="
+                    <?php if(isset($_POST['firstName'] )){  echo $_POST['firstName']; }; ?>
+                  "
                   oninvalid="this.setCustomValidity('ادخل الاسم الاول')"
                   oninput="this,setCustomValidity('')"
                 />
                 <label>الاسم الاول</label>
+              <!-- This Is Error Whene Start Validate UserName  -->
+             <?php if(isset($error['userName'])){echo 
+             "<p class='error'>" .$error['userName']."</p>";
+              }?> 
+             <!-- This Is Error Whene Start Validate UserName  -->
+
               </div>
               <div class="user-ln-box">
+                
                 <input
                   type="text"
                   maxlength="15"
-                  name="last-name"
+                  name="lastName"
+                  value=
+                  "
+                  <?php if(isset($_POST['lastName'] )){  echo $_POST['lastName']; }; ?>
+                  "
                   required
                   oninvalid="this.setCustomValidity('ادخل الاسم العائلة')"
                   oninput="this,setCustomValidity('')"
                 />
+                
                 <label>اسم العائلة</label>
+                <?php if(isset($error['lastName'])){echo 
+             "<p class='error'>" .$error['lastName']."</p>";
+              }?> 
               </div>
             </div>
             <!-- <div class="user-name">
@@ -59,12 +83,19 @@
               <div class="email-name-box">
                 <input
                   type="email"
-                  name="email-name-sign"
+                  name="email"
                   required
+                  value=
+                  "
+                  <?php if(isset($_POST['email'] )){  echo $_POST['email']; }; ?>
+                  "
                   oninvalid="this.setCustomValidity('الرجاء تضمين @ بعد اسم البريد الإلكتروني')"
                   oninput="this,setCustomValidity('')"
                 />
                 <label>عنوان البريد الالكترونى</label>
+                <?php if(isset($error['email'])){echo 
+             "<p class='error'>" .$error['email']."</p>";
+              }?> 
               </div>
             </div>
             <div class="user-kind">
@@ -97,12 +128,17 @@
                 <input
                   type="text"
                   maxlength="12"
-                  name="user-num-sign"
+                  name="user_number"
                   required
                   oninvalid="this.setCustomValidity('ادخل ادخل رقم الهاتف')"
+                  value=
+                  "
+                  <?php if(isset($_POST['user_number'] )){  echo $_POST['user_number']; }; ?>
+                  "
                   oninput="this,setCustomValidity('')"
                 />
                 <label>رقم الهاتف</label>
+                
               </div>
             </div>
 
@@ -111,12 +147,19 @@
                 <input
                   type="text"
                   maxlength="13"
-                  name="user-id-sign"
+                  name="user_idintity"
                   required
+                  value=
+                  "
+                  <?php if(isset($_POST['user_idintity'] )){  echo $_POST['user_idintity']; }; ?>
+                  "
                   oninvalid="this.setCustomValidity('ادخل رقم الهوية الشخصية')"
                   oninput="this,setCustomValidity('')"
                 />
                 <label>رقم الهوية الشخصية</label>
+                <?php if(isset($error['user_idintity'])){echo 
+             "<p class='error'>" .$error['user_idintity']."</p>";
+              }?> 
               </div>
             </div>
 
@@ -125,7 +168,7 @@
                 <input
                   type="password"
                   minlength="8"
-                  name="user-pass-sign"
+                  name="password"
                   required
                   oninvalid="this.setCustomValidity('ادخل كلمة السر التى سوف تكون بحسابك')"
                   oninput="this,setCustomValidity('')"
@@ -143,12 +186,12 @@
             </div>
           </form>
 
-          <form action="" id="login-form">
+          <form action="includes/functions/login.php" method="POST" id="login-form">
             <div class="email-name">
               <div class="email-name-box">
                 <input
                   type="email"
-                  name="email-name-login"
+                  name="email_login"
                   required
                   oninvalid="this.setCustomValidity('الرجاء تضمين @ بعد اسم البريد الإلكتروني')"
                   oninput="this,setCustomValidity('')"
@@ -160,9 +203,9 @@
             <div class="user-pass">
               <div class="user-pass-box">
                 <input
-                  type="password"
+                  type="password_login"
                   minlength="8"
-                  name="user-pass-login"
+                  name="password_login"
                   required
                   oninvalid="this.setCustomValidity('ادخل كلمة السر الخاصة بك')"
                   oninput="this,setCustomValidity('')"
@@ -183,6 +226,6 @@
         </div>
       </div>
     </div>
-    <script src="registration-script.js"></script>
+    <script src="../../asstes/js/registration-script.js"></script>
   </body>
 </html>

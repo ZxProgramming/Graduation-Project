@@ -737,3 +737,9 @@ input {
 
 
 /* login Section */
+
+/*  Error Style  */
+.error {
+       color: red;
+}
+/*  Error Style  */
