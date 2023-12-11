@@ -251,9 +251,33 @@ input {
        position: relative;
 }
 
+#signup-form .full-name .user-fn-box #fn-valid {
+       position: absolute;
+       width: 100%;
+       right: 0;
+       bottom: 10px;
+       color: red;
+       font-family: var(--main-font);
+       font-size: 0.9rem;
+       font-weight: var(--fw400);
+       display: none;
+}
+
 #signup-form .user-name .user-name-box {
        position: relative;
        width: 100%;
+}
+
+#signup-form .full-name .user-ln-box #ln-valid {
+       position: absolute;
+       width: 100%;
+       right: 0;
+       bottom: 10px;
+       color: red;
+       font-family: var(--main-font);
+       font-size: 0.9rem;
+       font-weight: var(--fw400);
+       display: none;
 }
 
 #login-form .email-name .email-name-box {
@@ -266,9 +290,33 @@ input {
        width: 100%;
 }
 
+#signup-form .email-name .email-name-box #email-valid {
+       position: absolute;
+       width: 100%;
+       right: 0;
+       bottom: 10px;
+       color: red;
+       font-family: var(--main-font);
+       font-size: 0.9rem;
+       font-weight: var(--fw400);
+       display: none;
+}
+
 #signup-form .user-num .user-num-box {
        position: relative;
        width: 100%;
+}
+
+#signup-form .user-num .user-num-box #num-valid {
+       position: absolute;
+       width: 100%;
+       right: 0;
+       bottom: 10px;
+       color: red;
+       font-family: var(--main-font);
+       font-size: 0.9rem;
+       font-weight: var(--fw400);
+       display: none;
 }
 
 #signup-form .user-id .user-id-box {
@@ -276,9 +324,33 @@ input {
        width: 100%;
 }
 
+#signup-form .user-id .user-id-box #idintity-valid {
+       position: absolute;
+       width: 100%;
+       right: 0;
+       bottom: 10px;
+       color: red;
+       font-family: var(--main-font);
+       font-size: 0.9rem;
+       font-weight: var(--fw400);
+       display: none;
+}
+
 #signup-form .user-pass .user-pass-box {
        position: relative;
        width: 100%;
+}
+
+#signup-form .user-pass .user-pass-box #pass-valid {
+       position: absolute;
+       width: 100%;
+       right: 0;
+       bottom: -5px;
+       color: red;
+       font-family: var(--main-font);
+       font-size: 0.9rem;
+       font-weight: var(--fw400);
+       display: none;
 }
 
 #signup-form .user-pass .user-pass-box i {
@@ -294,6 +366,7 @@ input {
 #login-form .user-pass .user-pass-box {
        position: relative;
        width: 100%;
+       margin-top: 20px;
 }
 
 #login-form .user-pass .user-pass-box i {
@@ -348,6 +421,18 @@ input {
        margin-bottom: 30px;
        border-bottom: 1px solid #fff;
        background: none;
+}
+
+#login-form .email-name .email-name-box #email_login_valid {
+       position: absolute;
+       width: 100%;
+       right: 0;
+       bottom: 5px;
+       color: red;
+       font-family: var(--main-font);
+       font-size: 1.1rem;
+       font-weight: var(--fw400);
+       display: none;
 }
 
 #signup-form .email-name .email-name-box input {
@@ -417,6 +502,17 @@ input {
        border-bottom: 1px solid #fff;
        outline: none;
        background: none;
+}
+#login-form .user-pass .user-pass-box #pass_login_valid {
+       position: absolute;
+       width: 100%;
+       right: 0;
+       bottom: 5px;
+       color: red;
+       font-family: var(--main-font);
+       font-size: 1.1rem;
+       font-weight: var(--fw400);
+       display: none;
 }
 
 #login-form .user-pass .user-pass-box input:active i:first-child {
@@ -781,14 +877,6 @@ input {
 
 /* login Section */
 
-<<<<<<< HEAD
-/*  Error Style  */
-.error {
-       color: red;
-}
-/*  Error Style  */
-=======
-
 @media (max-width: 1500px) {
        .container-login .wrapper-login .right-si {
               width: 50%;
@@ -942,7 +1030,7 @@ input {
        }
 
        #signup-form .user-submit {
-              margin-top: 0;
+              margin-top: 20px;
               gap: 0;
        }
 
@@ -950,4 +1038,3 @@ input {
               text-align: center;
        }
 }
->>>>>>> bc33a286155294bd5baf41a36fa6f5579f3ee12f

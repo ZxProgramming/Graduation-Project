@@ -102,3 +102,120 @@ pass_loginBtn.addEventListener("focusout", function () {
     show_pass_loginBtn.style.display = "none";
   }
 });
+
+const sub_sign = document.getElementById("sub-signBtn");
+const sub_login = document.getElementById("sub-loginBtn");
+
+const fn_valid = document.getElementById("fn-valid");
+const ln_valid = document.getElementById("ln-valid");
+const email_valid = document.getElementById("email-valid");
+const num_valid = document.getElementById("num-valid");
+const idintity_valid = document.getElementById("idintity-valid");
+const pass_valid = document.getElementById("pass-valid");
+
+const email_login_valid = document.getElementById("email_login_valid");
+const pass_login_valid = document.getElementById("pass_login_valid");
+const email_login = document.getElementById("email_login_btn");
+
+const fn_btn = document.getElementById("fn-btn");
+const ln_btn = document.getElementById("ln-btn");
+const email_btn = document.getElementById("email-btn");
+const num_btn = document.getElementById("num-btn");
+const idintity_btn = document.getElementById("idintity-btn");
+const pass_sign_btn = document.getElementById("password_sign");
+
+sub_sign.addEventListener("click", function () {
+  if (fn_btn.value == "") {
+    fn_valid.style.display = "block";
+  }
+
+  if (ln_btn.value == "") {
+    ln_valid.style.display = "block";
+  }
+
+  if (email_btn.value == "") {
+    email_valid.style.display = "block";
+  }
+
+  if (email_btn.value.includes("@")) {
+    email_valid.style.display = "none";
+  } else {
+    email_valid.style.display = "block";
+  }
+
+  if (num_btn.value == "") {
+    num_valid.style.display = "block";
+  }
+
+  if (idintity_btn.value == "") {
+    idintity_valid.style.display = "block";
+  }
+
+  if (pass_sign_btn.value == "") {
+    pass_valid.style.display = "block";
+  }
+});
+fn_btn.addEventListener("keyup", function () {
+  if (fn_btn.value !== "") {
+    fn_valid.style.display = "none";
+    console.log("nooooo");
+  }
+});
+ln_btn.addEventListener("keyup", function () {
+  if (ln_btn.value !== "") {
+    ln_valid.style.display = "none";
+    console.log("nooooo");
+  }
+});
+email_btn.addEventListener("keyup", function () {
+  if (email_btn.value !== "") {
+    email_valid.style.display = "none";
+    console.log("nooooo");
+  }
+});
+num_btn.addEventListener("keyup", function () {
+  if (num_btn.value !== "") {
+    num_valid.style.display = "none";
+    console.log("nooooo");
+  }
+});
+idintity_btn.addEventListener("keyup", function () {
+  if (idintity_btn.value !== "") {
+    idintity_valid.style.display = "none";
+    console.log("nooooo");
+  }
+});
+pass_sign_btn.addEventListener("keyup", function () {
+  if (pass_sign_btn.value !== "") {
+    pass_valid.style.display = "none";
+    console.log("nooooo");
+  }
+});
+sub_login.addEventListener("click", function () {
+  if (email_login.value == "") {
+    email_login_valid.style.display = "block";
+  }
+  if (email_login.value.includes("@")) {
+    email_login_valid.style.display = "none";
+  } else {
+    email_login_valid.style.display = "block";
+  }
+  if (pass_loginBtn.value == "") {
+    pass_login_valid.style.display = "block";
+  }
+});
+email_login.addEventListener("keyup", function () {
+  if (email_login.value !== "") {
+    email_login_valid.style.display = "none";
+  }
+});
+pass_loginBtn.addEventListener("keyup", function () {
+  if (this.value !== "") {
+    pass_login_valid.style.display = "none";
+  }
+  if (pass_loginBtn.value.length > 8) {
+    pass_login_valid.style.display = "none";
+  } else {
+    pass_login_valid.style.display = "block";
+  }
+});

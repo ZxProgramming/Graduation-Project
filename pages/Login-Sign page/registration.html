@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>login page</title>
+    <title>registration page</title>
     <link rel="stylesheet" href="registration-style.css" />
     <script
       src="https://kit.fontawesome.com/bbda8ae88d.js"
@@ -15,10 +15,7 @@
       <div class="wrapper-login">
         <div class="left-si">
           <figure>
-            <img
-              src="logo.svg"
-              alt="Lawyer Case"
-            />
+            <img src="logo.svg" alt="Lawyer Case" />
             <figcaption>Lawyer Case</figcaption>
           </figure>
         </div>
@@ -38,11 +35,13 @@
                 <input
                   type="text"
                   maxlength="15"
+                  id="fn-btn"
                   name="firstName"
                   required
                   oninvalid="this.setCustomValidity('ادخل الاسم الاول')"
                   oninput="this,setCustomValidity('')"
                 />
+                <span id="fn-valid">ادخل الاسم الاول</span>
                 <label>الاسم الاول</label>
               </div>
               <div class="user-ln-box">
@@ -50,29 +49,28 @@
                   type="text"
                   maxlength="15"
                   name="lastName"
+                  id="ln-btn"
                   required
                   oninvalid="this.setCustomValidity('ادخل الاسم العائلة')"
                   oninput="this,setCustomValidity('')"
                 />
-
+                <span id="ln-valid">ادخل اسم العائلة</span>
                 <label>اسم العائلة</label>
               </div>
             </div>
-            <!-- <div class="user-name">
-              <div class="user-name-box">
-                <input type="text" name="user-name-sign" required />
-                <label>اسم المستخدم</label>
-              </div>
-            </div> -->
             <div class="email-name">
               <div class="email-name-box">
                 <input
                   type="email"
                   name="email"
+                  id="email-btn"
                   required
                   oninvalid="this.setCustomValidity('الرجاء تضمين @ بعد اسم البريد الإلكتروني')"
                   oninput="this,setCustomValidity('')"
                 />
+                <span id="email-valid"
+                  >ادخل علامة "@" بعد اسم البريد الالكترونى</span
+                >
                 <label>عنوان البريد الالكترونى</label>
               </div>
             </div>
@@ -113,10 +111,12 @@
                   type="text"
                   maxlength="12"
                   name="user_number"
+                  id="num-btn"
                   required
-                  oninvalid="this.setCustomValidity('ادخل ادخل رقم الهاتف')"
+                  oninvalid="this.setCustomValidity('ادخل رقم الهاتف')"
                   oninput="this,setCustomValidity('')"
                 />
+                <span id="num-valid">ادخل رقم الهاتف</span>
                 <label>رقم الهاتف</label>
               </div>
             </div>
@@ -127,10 +127,12 @@
                   type="text"
                   maxlength="13"
                   name="user_idintity"
+                  id="idintity-btn"
                   required
                   oninvalid="this.setCustomValidity('ادخل رقم الهوية الشخصية')"
                   oninput="this,setCustomValidity('')"
                 />
+                <span id="idintity-valid">ادخل رقم الهوية الشخصية</span>
                 <label>رقم الهوية الشخصية</label>
               </div>
             </div>
@@ -153,6 +155,9 @@
                   id="hide_pass_sign"
                   style="display: none"
                 ></i>
+                <span id="pass-valid"
+                  >ادخل كلمة السر التى تتكون من اكتر من 8 ارقام</span
+                >
                 <label>كلمة السر</label>
               </div>
             </div>
@@ -176,10 +181,14 @@
                 <input
                   type="email"
                   name="email_login"
+                  id="email_login_btn"
                   required
                   oninvalid="this.setCustomValidity('الرجاء تضمين @ بعد اسم البريد الإلكتروني')"
                   oninput="this,setCustomValidity('')"
                 />
+                <span id="email_login_valid"
+                  >ادخل علامة "@" بعد اسم البريد الالكترونى</span
+                >
                 <label>عنوان البريد الالكترونى</label>
               </div>
             </div>
@@ -187,7 +196,7 @@
             <div class="user-pass">
               <div class="user-pass-box">
                 <input
-                  type="password_login"
+                  type="password"
                   minlength="8"
                   name="password_login"
                   name="user-pass-login"
@@ -202,6 +211,9 @@
                   id="hide_pass_login"
                   style="display: none"
                 ></i>
+                <span id="pass_login_valid"
+                  >ادخل كلمة السر التى تتكون من اكتر من 8 ارقام</span
+                >
                 <label>كلمة السر</label>
               </div>
             </div>
