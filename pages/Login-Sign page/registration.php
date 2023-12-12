@@ -1,9 +1,79 @@
+  <?php 
+      session_start();
+      include('../../init/init.php');
+      if($_SERVER['REQUEST_METHOD'] == 'POST'){
+         
+                  // If The Register Is User
+        if(isset($_POST['user'])){
+           $role= $_POST['user'];
+           $firstName =htmlspecialchars($_POST['firstName']);
+           $lastName =htmlspecialchars($_POST['lastName']);
+           $email =htmlspecialchars($_POST['email']);
+           $idintityUser =htmlspecialchars($_POST['user_idintityuser_number']);
+           $user_number =htmlspecialchars($_POST['user_number']);
+           $password =htmlspecialchars(md5($_POST['password']));
+           
+           $checkEmail= checkedData('email','users',$email);
+           if($checkEmail){
+             $error['email']='This Email Is Exist ';
+           }else{
+               $dataInsert=$con->prepare("INSERT INTO `users`( `userName`, `lastName`, `email`, `phoneNumber`, `idintity`, `password`, `Role`) 
+               VALUES ('$firstName','$lastName','$email','$user_number','$idintityUser','$password','$role')");
+               $dataInsert->execute();
+                 $_SESSION['user'] = [
+                   'userName'=>$firstName,
+                   'lastName'=>$lastName,
+                   'email'=>$email,
+                   'idintityUser'=>$idintityUser,
+                   'user_number'=>$user_number,
+               ];
+                   header('Location:../../pages/Users Page/users.php');
+         }
+        }
+
+                  // If The Register Is Lawyer
+         if(isset($_POST['lawyer'])){
+   $role= $_POST['lawyer'];
+          $firstName =htmlspecialchars($_POST['firstName']);
+           $lastName =htmlspecialchars($_POST['lastName']);
+           $email =htmlspecialchars($_POST['email']);
+           $lawyer_categry = $_POST['lawyer_categry'];
+           $idintityUser =htmlspecialchars($_POST['user_idintityuser_number']);
+           $user_number =htmlspecialchars($_POST['user_number']);
+           $password =htmlspecialchars(md5($_POST['password']));
+
+           $checkEmail= checkedData('email','lawyer',$email);
+           if($checkEmail){
+             $error['email']='This Email Is Exist ';
+           }else{
+               $dataInsert=$con->prepare("INSERT INTO `lawyer`( `userName`, `lastName`, `email`, `phoneNumber`, `idintity`, `password`, `type`,`Role`) 
+               VALUES ('$firstName','$lastName','$email','$user_number','$idintityUser','$password','$lawyer_categry','$role')");
+               $dataInsert->execute();
+                 $_SESSION['lawyer'] = [
+                   'userName'=>$firstName,
+                   'lastName'=>$lastName,
+                   'email'=>$email,
+                   'idintityUser'=>$idintityUser,
+                   'user_number'=>$user_number,
+                   'Role'=>$role,
+               ];
+          
+              //  echo " <script>alert('Data Inserted')</script>";
+                   header('Location:../../pages/Lawyers Page/lawyers.php');
+
+         }
+        }
+
+      }
+  
+  ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>registration page</title>
+    <title>login page</title>
     <link rel="stylesheet" href="registration-style.css" />
     <script
       src="https://kit.fontawesome.com/bbda8ae88d.js"
@@ -15,7 +85,10 @@
       <div class="wrapper-login">
         <div class="left-si">
           <figure>
-            <img src="logo.svg" alt="Lawyer Case" />
+            <img
+              src="logo.svg"
+              alt="Lawyer Case"
+            />
             <figcaption>Lawyer Case</figcaption>
           </figure>
         </div>
@@ -35,13 +108,11 @@
                 <input
                   type="text"
                   maxlength="15"
-                  id="fn-btn"
                   name="firstName"
                   required
                   oninvalid="this.setCustomValidity('ادخل الاسم الاول')"
                   oninput="this,setCustomValidity('')"
                 />
-                <span id="fn-valid">ادخل الاسم الاول</span>
                 <label>الاسم الاول</label>
               </div>
               <div class="user-ln-box">
@@ -49,29 +120,31 @@
                   type="text"
                   maxlength="15"
                   name="lastName"
-                  id="ln-btn"
                   required
                   oninvalid="this.setCustomValidity('ادخل الاسم العائلة')"
                   oninput="this,setCustomValidity('')"
                 />
-                <span id="ln-valid">ادخل اسم العائلة</span>
+
                 <label>اسم العائلة</label>
               </div>
             </div>
+            <!-- <div class="user-name">
+              <div class="user-name-box">
+                <input type="text" name="user-name-sign" required />
+                <label>اسم المستخدم</label>
+              </div>
+            </div> -->
             <div class="email-name">
               <div class="email-name-box">
                 <input
                   type="email"
                   name="email"
-                  id="email-btn"
                   required
                   oninvalid="this.setCustomValidity('الرجاء تضمين @ بعد اسم البريد الإلكتروني')"
                   oninput="this,setCustomValidity('')"
                 />
-                <span id="email-valid"
-                  >ادخل علامة "@" بعد اسم البريد الالكترونى</span
-                >
                 <label>عنوان البريد الالكترونى</label>
+                <?php if(isset( $error['email'])){  echo "<sapn>" .  $error['email']."</sapn>" ;}; ?> <!-- This Is Error If Email Exists -->
               </div>
             </div>
             <div class="user-kind">
@@ -87,7 +160,7 @@
                 <input id="lawyer-kind" value="محامى" readonly />
               </div>
               <div class="lawyer-categry">
-                <select name="lawyer-categry" id="lawyer-categry-sel">
+                <select name="lawyer_categry" id="lawyer-categry-sel">
                   <option value="" selected>اختر التخصص</option>
                   <option value="محامى أسرة">محامى أسرة</option>
                   <option value="محامى مجلس الدولة">محامى مجلس الدولة</option>
@@ -111,12 +184,10 @@
                   type="text"
                   maxlength="12"
                   name="user_number"
-                  id="num-btn"
                   required
-                  oninvalid="this.setCustomValidity('ادخل رقم الهاتف')"
+                  oninvalid="this.setCustomValidity('ادخل ادخل رقم الهاتف')"
                   oninput="this,setCustomValidity('')"
                 />
-                <span id="num-valid">ادخل رقم الهاتف</span>
                 <label>رقم الهاتف</label>
               </div>
             </div>
@@ -126,13 +197,11 @@
                 <input
                   type="text"
                   maxlength="13"
-                  name="user_idintity"
-                  id="idintity-btn"
+                  name="user_idintityuser_number"
                   required
                   oninvalid="this.setCustomValidity('ادخل رقم الهوية الشخصية')"
                   oninput="this,setCustomValidity('')"
                 />
-                <span id="idintity-valid">ادخل رقم الهوية الشخصية</span>
                 <label>رقم الهوية الشخصية</label>
               </div>
             </div>
@@ -155,9 +224,6 @@
                   id="hide_pass_sign"
                   style="display: none"
                 ></i>
-                <span id="pass-valid"
-                  >ادخل كلمة السر التى تتكون من اكتر من 8 ارقام</span
-                >
                 <label>كلمة السر</label>
               </div>
             </div>
@@ -181,14 +247,10 @@
                 <input
                   type="email"
                   name="email_login"
-                  id="email_login_btn"
                   required
                   oninvalid="this.setCustomValidity('الرجاء تضمين @ بعد اسم البريد الإلكتروني')"
                   oninput="this,setCustomValidity('')"
                 />
-                <span id="email_login_valid"
-                  >ادخل علامة "@" بعد اسم البريد الالكترونى</span
-                >
                 <label>عنوان البريد الالكترونى</label>
               </div>
             </div>
@@ -196,7 +258,7 @@
             <div class="user-pass">
               <div class="user-pass-box">
                 <input
-                  type="password"
+                  type="password_login"
                   minlength="8"
                   name="password_login"
                   name="user-pass-login"
@@ -211,9 +273,6 @@
                   id="hide_pass_login"
                   style="display: none"
                 ></i>
-                <span id="pass_login_valid"
-                  >ادخل كلمة السر التى تتكون من اكتر من 8 ارقام</span
-                >
                 <label>كلمة السر</label>
               </div>
             </div>

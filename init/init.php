@@ -6,7 +6,7 @@
         $database ='includes/';
     include($functions . 'functions.php');
     include('../../config/conf.php');
-    include('includes/functions/validation.php');
+    // include('includes/functions/validation.php');
   include('includes/functions/login.php');
 
 
