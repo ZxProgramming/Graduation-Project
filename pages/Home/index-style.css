@@ -194,7 +194,7 @@ body::-webkit-scrollbar-thumb {
        display: flex;
        align-items: center;
        justify-content: center;
-       background-image: url("BackgroundHero.jpg");
+       background-image: url("./asstes/BackgroundHero.jpg");
        background-position: center;
        background-repeat: no-repeat;
        background-size: cover;
@@ -443,12 +443,16 @@ body::-webkit-scrollbar-thumb {
 
 .container .container-wrapper .service-section .service-wrapper .content-section .card .top-card {
        position: relative;
+       height: 200px;
+       width: 100%;
+       /* overflow: hidden; */
+       background-color: red;
 }
 
 .container .container-wrapper .service-section .service-wrapper .content-section .card .top-card::after {
-       content: url('logo.svg');
+       content: url('asstes/logo.svg');
        position: absolute;
-       width: 35px;
+       width: 40px;
        border-radius: 50%;
        padding: 4px;
        top: 100%;
@@ -459,7 +463,8 @@ body::-webkit-scrollbar-thumb {
 
 .container .container-wrapper .service-section .service-wrapper .content-section .card .top-card img {
        width: 100%;
-       object-fit: contain;
+       height: 100%;
+       object-fit: cover;
        object-position: center;
 }
 
